@@ -50,11 +50,13 @@ export default function HotBeers() {
             </p>
           </div>
 
-          <Link href="/san-pham?filter=noi-bat"
+          <Link href="/san-pham"
             className="group hidden md:flex items-center gap-2 text-sm font-semibold text-[#1F1F1F] dark:text-white hover:text-[#C7A25C] uppercase tracking-widest transition-colors"
           >
             Xem toàn bộ bộ sưu tập
-            <span className="w-8 h-[1px] bg-current group-hover:w-12 transition-all"></span>
+            <span className="w-12 flex items-center">
+              <span className="h-[1px] w-8 bg-current group-hover:w-full transition-all duration-300"></span>
+            </span>
           </Link>
         </div>
 
