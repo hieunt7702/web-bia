@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Roboto_Slab } from "next/font/google";
+import { Analytics } from "@vercel/analytics/next";
 import "./globals.css";
 
 const robotoSlab = Roboto_Slab({
@@ -56,6 +57,7 @@ export default function RootLayout({
       </head>
       <body className="antialiased min-h-screen flex flex-col" suppressHydrationWarning>
         {children}
+        <Analytics />
       </body>
     </html>
   );
