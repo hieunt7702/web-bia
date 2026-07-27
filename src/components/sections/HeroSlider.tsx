@@ -39,8 +39,6 @@ const SLIDES = [
 
 export default function HeroSlider() {
   const [current, setCurrent] = useState(0);
-  const [mousePos, setMousePos] = useState({ x: 0, y: 0 });
-  const rafRef = React.useRef<number | null>(null);
   const total = SLIDES.length;
 
   const next = useCallback(() => setCurrent((prev) => (prev + 1) % total), [total]);
@@ -49,20 +47,6 @@ export default function HeroSlider() {
     const id = setInterval(next, 7000);
     return () => clearInterval(id);
   }, [next]);
-
-  const handleMouseMove = useCallback((e: React.MouseEvent) => {
-    if (rafRef.current) {
-      cancelAnimationFrame(rafRef.current);
-    }
-    const clientX = e.clientX;
-    const clientY = e.clientY;
-    
-    rafRef.current = requestAnimationFrame(() => {
-      const x = (clientX / window.innerWidth - 0.5) * 2;
-      const y = (clientY / window.innerHeight - 0.5) * 2;
-      setMousePos({ x, y });
-    });
-  }, []);
 
   const containerVariants: Variants = {
     hidden: { opacity: 0 },
@@ -82,10 +66,7 @@ export default function HeroSlider() {
   };
 
   return (
-    <section 
-      className="relative w-full h-screen min-h-[620px] bg-[#050505] overflow-hidden"
-      onMouseMove={handleMouseMove}
-    >
+    <section className="relative w-full h-screen min-h-[620px] bg-[#050505] overflow-hidden">
       {/* Background Slider Track */}
       <AnimatePresence initial={false}>
         <motion.div
