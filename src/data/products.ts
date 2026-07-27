@@ -45,7 +45,7 @@ export const PRODUCTS: Product[] = [
     name: 'Bia hơi Hà Nội Keg 1l', 
     category: 'Keg 1L', 
     price: 'Liên hệ', 
-    image: '/images/product/keg1_no.png',
+    image: '/images/product/keg2_no.png',
     description: 'Keg inox 1L cao cấp, giữ lạnh cực tốt và sang trọng. Sự lựa chọn hoàn hảo để trải nghiệm bia hơi chuẩn vị tại nhà hoặc mang đi dã ngoại. Thiết kế nắp bật thông minh giúp giữ bọt và áp suất tối ưu.',
     abv: '4.0%',
     volume: '1 Lít'
@@ -55,7 +55,7 @@ export const PRODUCTS: Product[] = [
     name: 'Bia hơi Hà Nội Keg 2l', 
     category: 'Keg 2L', 
     price: 'Liên hệ', 
-    image: '/images/product/keg2_no.png',
+    image: '/images/product/keg1_no.png',
     description: 'Keg inox 2L dung tích lớn hơn, thiết kế đẳng cấp. Lựa chọn tuyệt vời cho các buổi tiệc nhỏ. Keg inox giúp bia giữ được độ lạnh sâu, bọt dày và hương thơm thoang thoảng của hoa bia tự nhiên trong suốt thời gian dài.',
     abv: '4.0%',
     volume: '2 Lít'
